@@ -1,0 +1,256 @@
+@import "mixins"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import url(http://allfont.ru/allfont.css?fonts=a_groticnr-bold)
+@import url(http://allfont.ru/allfont.css?fonts=a_groticltnr-normal)
+a
+	&:hover
+		text-decoration: none
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+
+.header
+	background: rgba(0,0,0,0.93)
+	height: 95px
+	border-bottom: 1px solid $borderc
+	position: relative
+	z-index: 10
+	&__contacts
+		height: 95px
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.phones
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+			align-items: center
+			.wrap
+				margin-left: 10px
+			&__links
+				color: #fff
+				font-size: 16px
+				line-height: 1.2
+				display: -webkit-flex
+				display: -ms-flex
+				display: flex
+				align-items: center
+				span
+					font-weight: bold
+					font-size: 22px
+					margin-left: 4px
+			&__img
+				display: inline-block
+				width: 20px
+				height: 20px
+		.adress
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+			align-items: center
+			.wrap
+				margin-left: 10px
+			&__links
+				color: #fff
+				font-size: 16px
+				display: block
+				line-height: 1.4
+			&__img
+				display: inline-block
+				width: 20px
+				height: 20px
+	&__logo
+		height: 95px
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+	&__menu
+		height: 95px
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+		.list
+			padding: 0
+			margin: 0
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			&__item
+				list-style: none
+			&__link
+				color: #fff
+				font-size: 18px
+				padding: 0 5px
+				padding-bottom: 6px
+				border-bottom: 2px solid transparent
+				border-radius: 2px
+				&:hover
+					border-bottom: 2px solid #fff
+				&--drop
+					position: relative
+					padding-right: 24px
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						right: 8px
+						top: 9px
+						width: 10px
+						height: 6px
+						background: url("../img/arrow_bottom.png") no-repeat center
+
+.we
+	background: url("../img/we.png")no-repeat center
+	background-size: cover
+	margin-top: -95px
+	height: 430px
+	&__block
+		background: rgba(10,10,10,0.97)
+		height: 625px
+		position: relative
+		top: -95px
+		z-index: 100
+		padding: 35px 0
+	&__title
+		text-align: center
+		margin-bottom: 35px
+		margin-top: 0
+		font-size: 26px
+		color: #fff
+		font-family: $bold-font
+	&__item
+		text-align: center
+		margin-top: 40px
+	&__img
+		width: 200px
+	&__desc
+		color: #fff
+		font-size: 16px
+		line-height: 1.2
+
+
+.services
+	background: #000
+	border-top: 1px solid $borderc
+	border-bottom: 1px solid $borderc
+
+
+.slider
+	position: relative
+	top: -95px
+	z-index: -1
+	.item
+		.caption
+			position: absolute
+			top: 50%
+			color: #fff
+			line-height: 1.3
+			margin-top: -115px
+			&__h2
+				font-size: 24px
+				font-weight: bold
+			&__p
+				font-size: 18px
+				margin: 35px 0
+		.overlay
+			position: absolute
+			width: auto !important
+			top: 90px
+	 &__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.btn
+	border: 3px solid #fff
+	text-transform: uppercase
+	display: inline-block
+	padding: 10px 35px
+	font-size: 16px
+	color: #fff
+	font-family: $bold-font
+	&:hover
+		text-decoration: none
+		border: 3px solid #000
+		background: #fff
+		color: #000
+
+.owl-nav
+	position: absolute
+	bottom: 15%
+	left: 50%
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+.owl-dots
+	position: absolute
+	bottom: 15%
+	left: 50%
+	margin-left: 47px
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+	height: 20px
+	margin-bottom: 3px
+.owl-carousel .owl-dot
+	width: 16px
+	height: 16px
+	border: 2px solid #fff
+	margin-right: 10px
+	background: transparent
+.active
+	background: #fff !important
+.owl-carousel .owl-nav .owl-prev
+	background: url("../img/arrow_slider.png")no-repeat center
+	background-size: cover
+	width: 24px
+	height: 24px
+	margin-right: 140px
+.owl-carousel .owl-nav .owl-next
+	background: url("../img/arrow_slider.png")no-repeat center
+	background-size: cover
+	width: 24px
+	height: 24px
+	transform: rotate(180deg)
+@import "media"
