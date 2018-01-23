@@ -7,4 +7,11 @@ $(document).ready(function(){
     dotsEach: true,
     navText: ""
   });
+  $(".slider-partners").owlCarousel({
+    items: 4,
+    loop: true,
+    dots: true,
+    dotsEach: true,
+    navText: ""
+  });
 });
