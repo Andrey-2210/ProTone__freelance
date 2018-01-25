@@ -4,6 +4,7 @@
 @import "vars"
 @import url(http://allfont.ru/allfont.css?fonts=a_groticnr-bold)
 @import url(http://allfont.ru/allfont.css?fonts=a_groticltnr-normal)
+@import "../../node_modules/hamburgers/dist/hamburgers"
 a
 	&:hover
 		text-decoration: none
@@ -40,6 +41,11 @@ body
 	line-height: 1.75
 	font-family: $default-font
 	overflow-x: hidden
+
+.active
+	opacity: 1 !important
+	z-index: 1000 !important
+
 .up
 	position: relative
 	top: -95px
@@ -51,7 +57,8 @@ body
 		-moz-transition: all .5s ease-out
 		-o-transition: all .5s ease-out
 		-webkit-transition: all .5s ease-out
-
+.menu-mobile
+	display: none
 .header
 	background: rgba(0,0,0,0.93)
 	height: 95px
@@ -116,6 +123,8 @@ body
 		display: -ms-flex
 		display: flex
 		align-items: center
+		&--mobile
+			display: none
 		.list
 			padding: 0
 			margin: 0
@@ -285,6 +294,7 @@ body
 		background: #000
 		border: 2px solid #fff
 		padding: 10px 20px
+		margin-bottom: 15px
 		&:hover
 			background: #fff
 			border-color: #000
@@ -482,4 +492,33 @@ body
 	width: 24px
 	height: 24px
 	transform: rotate(180deg)
+
+
+
+
+.dropdown
+	position: relative
+	display: inline-block
+	&__button
+		&:hover+.dropdown__content
+			display: block
+	&__content
+		display: none
+		position: absolute
+		background-color: #000
+		min-width: 160px
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+		z-index: 1
+		&:hover
+			display: block
+	&__link
+		color: #fff
+		padding: 6px 10px
+		text-decoration: none
+		display: block
+		&:hover
+			color: #000
+			background-color: #fff
+
+
 @import "media"
