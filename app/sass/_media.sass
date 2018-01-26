@@ -9,12 +9,29 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+  .header
+    &__menu
+      .list
+        &__item
+          .list__link
+            font-size: 15px
+            
+    &__contacts
+      .adress
+        &__links
+          font-size: 14px
+      .phones
+        &__links
+          font-size: 14px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  .header__menu .list__link
+    font-size: 15px
+  .header__contacts .adress__links
+    font-size: 14px
+  .header__contacts .phones__links
+    font-size: 14px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 480px)
