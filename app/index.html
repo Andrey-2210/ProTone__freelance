@@ -65,7 +65,7 @@
 						<a href="/"><img src="img/logo.png" alt="PROtone" class="logo__img"></a>
 					</div>
 				</div>
-				<div class="col-md-5 col-xs-6">
+				<div class="col-md-offset-1 col-md-5 col-xs-6">
 					<div class="menu-mobile hamburger hamburger--3dx-r">
 				  <div class="hamburger-box">
 				    <div class="hamburger-inner"></div>
@@ -84,11 +84,13 @@
 									<a href="#" class="dropdown__link smooth--half" >Автостекло</a>
 								</div>
 							</li>
-							<li class="list__item">
-								<a href="#" class="list__link smooth--half">Шины и диски</a>
-							</li>
-							<li class="list__item">
-								<a href="#" class="list__link smooth--half">Автозапчасти</a>
+							<li class="list__item dropdown">
+								<a href="#" class="list__link list__link--drop smooth--half dropdown__button">Товар</a>
+								<div class="dropdown__content smooth">
+									<a href="#" class="dropdown__link smooth--half" >Шины и диски</a>
+									<a href="#" class="dropdown__link smooth--half" >Автосигнализация</a>
+									<a href="#" class="dropdown__link smooth--half" >Автозапчасти</a>
+								</div>
 							</li>
 							<li class="list__item">
 								<a href="#" class="list__link smooth--half">Контакты</a>
@@ -96,15 +98,10 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div class="header__contacts">
-						<div class="adress">
-							<img src="img/home.png" alt="" class="adress__img">
-							<div class="wrap">
-								<a href="#" class="adress__links">г. Сыктывкар, ул. Орджоникидзе 50/12</a>
-								<a href="#" class="adress__links">г. Ухта, ул. Машиностроителей 4</a>
-							</div>
-
+						<div class="search">
+							<a href="#"><img src="img/search.png" alt=""></a>
 						</div>
 						<div class="phones">
 							<img src="img/phone.png" alt="" class="phones__img">
@@ -118,7 +115,7 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<div class="slider owl-carousel up">
 		<div class="item">
 			<img src="img/overlay.png" class="overlay"></img>
@@ -287,7 +284,7 @@
 		</div>
 	</section>
 
-	<section class="popular up">
+<!--	<section class="popular up">
 		<h2 class="popular__title">Популярные товары</h2>
 		<div class="container">
 			<div class="row">
@@ -356,10 +353,9 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="partners up">
-		<h2 class="partners__title">Партнеры</h2>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -465,6 +461,7 @@
 		</div>
 
 	</section>
+	<div id = "toTop"><img src="img/arrow_slider.png" alt=""></div>
 
 
 	<link rel="stylesheet" href="css/style.min.css">

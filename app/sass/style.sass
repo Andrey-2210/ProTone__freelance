@@ -62,7 +62,6 @@ body
 .header
 	background: rgba(0,0,0,0.93)
 	height: 95px
-	border-bottom: 1px solid $borderc
 	position: relative
 	z-index: 10
 	&__contacts
@@ -72,11 +71,20 @@ body
 		display: flex
 		align-items: center
 		justify-content: space-between
+		position: relative
+		.search
+			margin-left: 25px
+			a
+				img
+					width: 20px
+					height: 20px
 		.phones
 			display: -webkit-flex
 			display: -ms-flex
 			display: flex
 			align-items: center
+			position: absolute
+			right: 0
 			.wrap
 				margin-left: 10px
 			&__links
@@ -309,13 +317,30 @@ body
 		display: inline-block
 		width: auto
 	.slider-partners
-		margin-bottom: 50px
-		.owl-dots
-			bottom: -45px
-			left: 0
+		.owl-nav
 			width: 100%
-			margin: 0
-			justify-content: center
+			bottom: 50%
+			margin-top: -24px
+			left: 0
+			.owl-prev
+				position: absolute
+				left: -30px
+				background: none
+				width: 25px
+				height: 25px
+				border-top: 2px solid #fff
+				border-left: 2px solid #fff
+				transform: rotate(315deg)
+			.owl-next
+				position: absolute
+				background: none
+				width: 25px
+				height: 25px
+				border-top: 2px solid #fff
+				border-left: 2px solid #fff
+				right: -30px
+				transform: rotate(135deg)
+
 .con
 	padding: 0 !important
 	.contacts__info
@@ -412,6 +437,7 @@ body
 
 .btn
 	border: 3px solid #fff
+	border-radius: 5px
 	text-transform: uppercase
 	display: inline-block
 	padding: 6px 35px
@@ -450,6 +476,7 @@ body
 .owl-carousel .owl-dot
 	width: 16px
 	height: 16px
+	border-radius: 100%
 	border: 2px solid #fff
 	margin-right: 10px
 	background: transparent
@@ -517,16 +544,12 @@ body
 	&--autoparts
 		background: url(../img/truck.png) no-repeat center
 		background-size: cover
-	&--protected
-		background: url(../img/protected.png) no-repeat center
-		background-size: cover
 	&__title
 		font-size: 48px
 		font-family: $bold-font
 		text-shadow: 0px 3px 11px rgba(0,0,0,1)
 		color: #fff
 		margin: 0
-		margin-top: 95px
 .collection
 	background: #000
 	border-top: 1px solid $borderc
@@ -546,6 +569,7 @@ body
 		font-size: 26px
 		color: #fff
 		font-family: $bold-font
+		margin-top: 95px
 	&__bottomblock
 		background: rgba(0,0,0,0.8)
 		padding: 10px
@@ -751,4 +775,19 @@ body
 			margin-right: 5px
 			width: 20px
 			height: 20px
+
+#toTop
+	background: rgba(0,0,0,0.3)
+	text-align: center
+	padding: 5px
+	position: fixed
+	bottom: 10px
+	left: 10px
+	cursor: pointer
+	display: none
+	text-align: center
+	z-index: 100000
+	img
+		transform: rotate(90deg)
+
 @import "media"
