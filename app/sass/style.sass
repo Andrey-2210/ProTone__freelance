@@ -455,8 +455,9 @@ body
 
 .owl-nav
 	position: absolute
-	bottom: 15%
-	left: 50%
+	bottom: 50%
+	left: 0
+	right: 0
 	display: -webkit-flex
 	display: -ms-flex
 	display: flex
@@ -465,7 +466,7 @@ body
 	position: absolute
 	bottom: 15%
 	left: 50%
-	margin-left: 47px
+	margin-left: -47px
 	display: -webkit-flex
 	display: -ms-flex
 	display: flex
@@ -482,20 +483,24 @@ body
 .owl-dots .active
 	background: #fff !important
 .owl-carousel .owl-nav .owl-prev
-	background: url("../img/arrow_slider.png")no-repeat center
-	background-size: cover
-	width: 24px
-	height: 24px
-	margin-right: 140px
+	position: absolute
+	left: 1%
+	background: none
+	width: 25px
+	height: 25px
+	border-top: 2px solid #fff
+	border-left: 2px solid #fff
+	transform: rotate(315deg)
+
 .owl-carousel .owl-nav .owl-next
-	background: url("../img/arrow_slider.png")no-repeat center
-	background-size: cover
-	width: 24px
-	height: 24px
-	transform: rotate(180deg)
-
-
-
+	position: absolute
+	background: none
+	width: 25px
+	height: 25px
+	border-top: 2px solid #fff
+	border-left: 2px solid #fff
+	right: 1%
+	transform: rotate(135deg)
 
 .dropdown
 	position: relative
@@ -776,7 +781,6 @@ body
 			height: 20px
 
 #toTop
-	background: rgba(0,0,0,0.3)
 	text-align: center
 	padding: 5px
 	position: fixed
@@ -786,7 +790,8 @@ body
 	display: none
 	text-align: center
 	z-index: 100000
+	width: 70px
 	img
-		transform: rotate(90deg)
+		width: 100%
 
 @import "media"
